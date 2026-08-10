@@ -59,7 +59,7 @@ export default function ServicePrices({ onOpenContact }: ServicePricesProps) {
           <span className="text-xs font-semibold tracking-widest text-[#d97736] uppercase bg-[#1a1613] border border-[#d97736]/30 px-3.5 py-1.5 rounded-full">
             Behandlungen & Preise
           </span>
-          <h2 className="font-outfit text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mt-4 text-balance">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-white mt-4 text-balance">
             Barber-Handwerk & Preistabelle
           </h2>
           <p className="text-stone-300 text-base sm:text-lg mt-4 text-pretty font-normal">
@@ -73,8 +73,8 @@ export default function ServicePrices({ onOpenContact }: ServicePricesProps) {
             <div key={idx} className="bg-[#1a1613] border border-stone-800/80 rounded-3xl p-7 hover:border-[#d97736]/50 transition-all shadow-lg flex flex-col justify-between space-y-6">
               <div className="space-y-4">
                 <div className="flex items-center justify-between border-b border-stone-800 pb-3">
-                  <h3 className="font-outfit font-bold text-xl text-white leading-snug">{s.title}</h3>
-                  <span className="font-outfit font-extrabold text-[#d97736] text-lg shrink-0 ml-2">{s.price}</span>
+                  <h3 className="font-serif font-semibold text-xl text-white leading-snug">{s.title}</h3>
+                  <span className="font-serif font-extrabold text-[#d97736] text-lg shrink-0 ml-2">{s.price}</span>
                 </div>
 
                 <span className="text-[11px] font-semibold text-stone-400 uppercase tracking-widest block">Dauer: {s.time}</span>

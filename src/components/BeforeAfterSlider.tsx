@@ -13,7 +13,7 @@ export default function BeforeAfterSlider() {
           <span className="text-xs font-semibold tracking-widest text-[#d97736] uppercase bg-[#0f0d0c] border border-[#d97736]/30 px-3.5 py-1.5 rounded-full">
             Barber-Transformation
           </span>
-          <h2 className="font-outfit text-3xl sm:text-4xl font-extrabold text-white mt-4">
+          <h2 className="font-serif text-3xl sm:text-4xl font-normal text-white mt-4">
             Vorher / Nachher Umstyling-Vergleich
           </h2>
           <p className="text-stone-300 text-sm sm:text-base mt-2 font-normal">

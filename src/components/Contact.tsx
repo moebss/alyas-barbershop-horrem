@@ -21,8 +21,8 @@ export default function Contact() {
               Kontakt & Anfahrt
             </span>
 
-            <h2 className="font-outfit text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight">
-              Buchen Sie Ihren <span className="italic font-normal text-[#d97736]">Verwöhn-Termin</span>
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-white leading-tight">
+              Buchen Sie Ihren <span className="italic text-[#d97736]">Verwöhn-Termin</span>
             </h2>
 
             <p className="text-stone-300 text-sm sm:text-base leading-relaxed font-normal">
@@ -62,12 +62,12 @@ export default function Contact() {
             {submitted ? (
               <div className="text-center py-12 space-y-4">
                 <CheckCircle className="w-12 h-12 text-[#d97736] mx-auto" />
-                <h3 className="font-outfit font-bold text-2xl text-white">Vielen Dank!</h3>
+                <h3 className="font-serif font-semibold text-2xl text-white">Vielen Dank!</h3>
                 <p className="text-xs text-stone-300">Ihre Termin-Anfrage ist bei uns eingegangen. Wir bestätigen Ihren Termin in Kürze!</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4 text-xs">
-                <h3 className="font-outfit font-bold text-2xl text-white mb-2">Termin-Anfrage Senden</h3>
+                <h3 className="font-serif font-semibold text-2xl text-white mb-2">Termin-Anfrage Senden</h3>
                 
                 <div>
                   <label className="block text-stone-300 font-bold mb-1">Ihr Name *</label>

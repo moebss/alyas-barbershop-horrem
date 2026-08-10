@@ -35,7 +35,7 @@ export default function FAQ() {
           <span className="text-xs font-semibold tracking-widest text-[#d97736] uppercase bg-[#0f0d0c] border border-[#d97736]/30 px-3.5 py-1.5 rounded-full">
             Häufige Fragen
           </span>
-          <h2 className="font-outfit text-3xl sm:text-4xl font-extrabold text-white mt-4">
+          <h2 className="font-serif text-3xl sm:text-4xl font-normal text-white mt-4">
             Fragen & Antworten (FAQ)
           </h2>
         </div>
@@ -46,7 +46,7 @@ export default function FAQ() {
               <button
                 type="button"
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
-                className="w-full text-left p-5 flex items-center justify-between font-outfit font-bold text-white text-base focus:outline-none"
+                className="w-full text-left p-5 flex items-center justify-between font-serif font-semibold text-white text-base focus:outline-none"
               >
                 <span>{faq.q}</span>
                 <ChevronDown className={`w-5 h-5 text-[#d97736] transition-transform ${openIndex === idx ? 'rotate-180' : ''}`} />

@@ -1,4 +1,4 @@
-import { Star, CheckCircle2, ShieldCheck, ArrowRight, Scissors, MapPin } from 'lucide-react';
+import { Star, CheckCircle2, ShieldCheck, ArrowRight, MapPin } from 'lucide-react';
 import heroImg from '../images/hero_barber.jpg';
 
 interface HeroProps {
@@ -38,9 +38,9 @@ export default function Hero({ onOpenContact }: HeroProps) {
             </span>
           </div>
 
-          {/* Headline - Outfit Display */}
-          <h1 className="font-outfit text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1]">
-            Präzisions-Fades & <span className="italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#f0a673] via-[#d97736] to-[#a8521a]">Hot Towel Rasur</span>.
+          {/* Headline - Fraunces Serif Display */}
+          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white leading-[1.1]">
+            Präzisions-Fades & <span className="italic text-[#d97736]">Hot Towel Rasur</span>.
           </h1>
 
           {/* Subline */}

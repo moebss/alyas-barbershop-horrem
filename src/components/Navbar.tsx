@@ -6,7 +6,7 @@ interface NavbarProps {
 
 export default function Navbar({ onOpenContact }: NavbarProps) {
   return (
-    <header className="sticky top-0 z-50 bg-[#0f0d0c]/90 backdrop-blur-md border-b border-stone-800/80 py-3.5 px-4 sm:px-8 shadow-lg">
+    <header className="sticky top-0 z-50 bg-[#0f0d0c]/95 backdrop-blur-md border-b border-stone-800/80 py-3.5 px-4 sm:px-8 shadow-lg">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
         
         {/* Brand Logo */}
@@ -15,12 +15,12 @@ export default function Navbar({ onOpenContact }: NavbarProps) {
             <Scissors className="w-5 h-5 text-[#d97736]" />
           </div>
           <div>
-            <span className="font-outfit font-bold text-lg sm:text-xl tracking-tight text-white block leading-none">Alyas Barbershop</span>
+            <span className="font-serif font-bold text-xl sm:text-2xl tracking-tight text-white block leading-none">Alyas Barbershop</span>
             <span className="text-[10px] font-semibold text-[#d97736] tracking-widest uppercase block mt-1">Gentlemen's Cut • Horrem</span>
           </div>
         </div>
 
-        {/* Navigation Links - Streamlined to avoid crowding */}
+        {/* Navigation Links */}
         <nav className="hidden lg:flex items-center gap-6 text-xs font-semibold text-stone-300 uppercase tracking-wider">
           <a href="#preise" className="hover:text-[#d97736] transition-colors whitespace-nowrap">Preise & Services</a>
           <a href="#ueber-uns" className="hover:text-[#d97736] transition-colors whitespace-nowrap">Über Uns</a>

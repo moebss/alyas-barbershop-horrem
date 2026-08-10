@@ -54,7 +54,7 @@ export default function PortfolioGallery({ onOpenContact }: PortfolioGalleryProp
           <span className="text-xs font-semibold tracking-widest text-[#d97736] uppercase bg-[#1a1613] border border-[#d97736]/30 px-3.5 py-1.5 rounded-full">
             Portfolio & Inspiration
           </span>
-          <h2 className="font-outfit text-3xl sm:text-4xl font-extrabold text-white mt-4">
+          <h2 className="font-serif text-3xl sm:text-4xl font-normal text-white mt-4">
             Echte Schnitte aus Unserem Barbershop
           </h2>
           <p className="text-stone-300 text-sm sm:text-base mt-2 font-normal">
@@ -101,7 +101,7 @@ export default function PortfolioGallery({ onOpenContact }: PortfolioGalleryProp
 
               <div className="p-5 space-y-2 flex-grow flex flex-col justify-between">
                 <div>
-                  <h3 className="font-outfit font-bold text-lg text-white">{item.title}</h3>
+                  <h3 className="font-serif font-semibold text-lg text-white">{item.title}</h3>
                   <p className="text-xs text-stone-400 font-normal leading-relaxed mt-1">{item.desc}</p>
                 </div>
 

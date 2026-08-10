@@ -35,8 +35,8 @@ export default function AboutUs() {
               Über Das Studio
             </span>
 
-            <h2 className="font-outfit text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight">
-              Echte Handwerkskunst für Ihren <span className="italic font-normal text-[#d97736]">perfekten Cut</span>
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-white leading-tight">
+              Echte Handwerkskunst für Ihren <span className="italic text-[#d97736]">perfekten Cut</span>
             </h2>
 
             <p className="text-stone-300 text-sm sm:text-base leading-relaxed font-normal">
@@ -67,7 +67,7 @@ export default function AboutUs() {
                 <Scissors className="w-6 h-6 text-[#d97736]" />
               </div>
               <div>
-                <span className="font-outfit font-bold text-white text-base block">Team Alyas Barbershop</span>
+                <span className="font-serif font-semibold text-white text-base block">Team Alyas Barbershop</span>
                 <span className="text-xs text-stone-400 block">Bahnhofstraße 14, 50169 Kerpen-Horrem</span>
               </div>
             </div>

@@ -2,15 +2,15 @@
 
 @layer base {
   body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Jost', sans-serif;
   }
-  h1, h2, h3, .font-display, .font-outfit {
-    font-family: 'Outfit', sans-serif;
+  h1, h2, h3, .font-display, .font-serif, .font-fraunces {
+    font-family: 'Fraunces', serif;
   }
 }
 
-/* Kreativrichtung: Professionell / Dark Industrial Mahogany / Peer / Durchdacht */
-/* Begründung: Gentlemen's Barbershop in Kerpen-Horrem mit Fokus auf Präzisions-Fades & Bartpflege */
+/* Kreativrichtung: Vintage Gentlemen's Barber / Mahogany & Copper / Autorität / Durchdacht */
+/* Begründung: Echtes Barbershop-Handwerk in Kerpen-Horrem mit Fraunces Serif Headlines */
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
