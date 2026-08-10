@@ -9,6 +9,7 @@ import CostEstimator from './components/CostEstimator';
 import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import MobileStickyBar from './components/MobileStickyBar';
 
 export default function App() {
   const scrollToContact = () => {
@@ -19,7 +20,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0f0d0c] text-stone-100 flex flex-col font-sans selection:bg-[#d97736] selection:text-stone-950">
+    <div className="min-h-screen bg-[#0f0d0c] text-stone-100 flex flex-col font-sans selection:bg-[#d97736] selection:text-stone-950 pb-16 sm:pb-0">
       <Navbar onOpenContact={scrollToContact} />
       <main className="flex-grow">
         <Hero onOpenContact={scrollToContact} />
@@ -33,6 +34,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <MobileStickyBar onOpenContact={scrollToContact} />
     </div>
   );
 }
