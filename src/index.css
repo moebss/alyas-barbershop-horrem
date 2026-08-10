@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+  h1, h2, h3, .font-display, .font-outfit {
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+/* Kreativrichtung: Professionell / Dark Industrial Mahogany / Peer / Durchdacht */
+/* Begründung: Gentlemen's Barbershop in Kerpen-Horrem mit Fokus auf Präzisions-Fades & Bartpflege */
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
