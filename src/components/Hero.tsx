@@ -1,14 +1,12 @@
-import { Star, CheckCircle2, ShieldCheck, ArrowRight, MapPin, Sparkles } from 'lucide-react';
+import { Star, CheckCircle2, ShieldCheck, ArrowRight, MapPin } from 'lucide-react';
 import heroImg from '../images/hero_barber.jpg';
+import heroVideo from '../images/hero_barber_loop.mp4';
 
 interface HeroProps {
   onOpenContact: () => void;
 }
 
 export default function Hero({ onOpenContact }: HeroProps) {
-  // High quality MP4 video loop for barber studio atmosphere
-  const sampleVideoUrl = "https://assets.mixkit.co/videos/preview/mixkit-barber-shaving-a-man-in-a-barbershop-42795-large.mp4";
-
   return (
     <section className="relative min-h-[calc(100vh-4.5rem)] flex items-center overflow-hidden bg-[#0f0d0c] border-b border-stone-800/80 py-16 lg:py-24">
       
@@ -21,16 +19,20 @@ export default function Hero({ onOpenContact }: HeroProps) {
           className="absolute inset-0 w-full h-full object-cover object-center filter brightness-60 contrast-110"
         />
 
-        {/* HTML5 Seamless Video Loop */}
+        {/* HTML5 Local Video Loop */}
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover object-center filter brightness-60 contrast-110 opacity-85 transition-opacity duration-1000"
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover object-center filter brightness-60 contrast-110 opacity-90 transition-opacity duration-1000"
         >
-          <source src={sampleVideoUrl} type="video/mp4" />
+          <source src={heroVideo} type="video/mp4" />
         </video>
+
+        {/* Animated Micro-Motion Ambient Glow Particles */}
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-[#d97736]/15 rounded-full blur-3xl animate-pulse pointer-events-none" />
 
         {/* Dark Vignette & Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0f0d0c] via-[#0f0d0c]/85 to-[#0f0d0c]/40" />
