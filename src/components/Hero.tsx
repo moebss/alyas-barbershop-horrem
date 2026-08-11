@@ -1,4 +1,4 @@
-import { Star, CheckCircle2, ShieldCheck, ArrowRight, MapPin } from 'lucide-react';
+import { Star, CheckCircle2, ShieldCheck, ArrowRight, MapPin, Sparkles } from 'lucide-react';
 import heroImg from '../images/hero_barber.jpg';
 
 interface HeroProps {
@@ -6,18 +6,34 @@ interface HeroProps {
 }
 
 export default function Hero({ onOpenContact }: HeroProps) {
+  // High quality MP4 video loop for barber studio atmosphere
+  const sampleVideoUrl = "https://assets.mixkit.co/videos/preview/mixkit-barber-shaving-a-man-in-a-barbershop-42795-large.mp4";
+
   return (
     <section className="relative min-h-[calc(100vh-4.5rem)] flex items-center overflow-hidden bg-[#0f0d0c] border-b border-stone-800/80 py-16 lg:py-24">
       
-      {/* Full Bleed Background Image */}
-      <div className="absolute inset-0 z-0">
+      {/* Full Bleed Cinematic Background Video & Image Fallback */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        {/* Background Image Fallback */}
         <img
           src={heroImg}
           alt="Alyas Barbershop Horrem Full Bleed Ambiente"
-          className="w-full h-full object-cover object-center filter brightness-65 contrast-110"
+          className="absolute inset-0 w-full h-full object-cover object-center filter brightness-60 contrast-110"
         />
+
+        {/* HTML5 Seamless Video Loop */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover object-center filter brightness-60 contrast-110 opacity-85 transition-opacity duration-1000"
+        >
+          <source src={sampleVideoUrl} type="video/mp4" />
+        </video>
+
         {/* Dark Vignette & Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0f0d0c] via-[#0f0d0c]/90 to-[#0f0d0c]/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0f0d0c] via-[#0f0d0c]/85 to-[#0f0d0c]/40" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0f0d0c] via-transparent to-[#0f0d0c]/60" />
       </div>
 
@@ -33,8 +49,9 @@ export default function Hero({ onOpenContact }: HeroProps) {
                 <Star key={i} className="w-3.5 h-3.5 fill-stone-200 text-stone-200" />
               ))}
             </div>
-            <span className="text-xs font-bold text-[#d97736] tracking-wider uppercase">
-              Exklusiver Herrenfriseur in Horrem
+            <span className="text-xs font-bold text-[#d97736] tracking-wider uppercase flex items-center gap-1.5">
+              <span>Exklusiver Herrenfriseur in Horrem</span>
+              <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
             </span>
           </div>
 
