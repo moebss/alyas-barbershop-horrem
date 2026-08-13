@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Phone, Calendar, Scissors, Menu, X, MessageSquare } from 'lucide-react';
+import { Phone, Calendar, Scissors, Menu, X } from 'lucide-react';
 
 interface NavbarProps {
   onOpenContact: () => void;
@@ -27,7 +27,6 @@ export default function Navbar({ onOpenContact }: NavbarProps) {
         <nav className="hidden lg:flex items-center gap-6 text-xs font-semibold text-stone-300 uppercase tracking-wider">
           <a href="#preise" className="hover:text-[#d97736] transition-colors whitespace-nowrap">Preise & Services</a>
           <a href="#ueber-uns" className="hover:text-[#d97736] transition-colors whitespace-nowrap">Über Uns</a>
-          <a href="#galerie-grid" className="hover:text-[#d97736] transition-colors whitespace-nowrap">Portfolio</a>
           <a href="#transformation" className="hover:text-[#d97736] transition-colors whitespace-nowrap">Vorher / Nachher</a>
           <a href="#faq" className="hover:text-[#d97736] transition-colors whitespace-nowrap">FAQ</a>
         </nav>
@@ -80,13 +79,6 @@ export default function Navbar({ onOpenContact }: NavbarProps) {
             className="block py-2 hover:text-[#d97736]"
           >
             Über Uns
-          </a>
-          <a
-            href="#galerie-grid"
-            onClick={() => setMobileMenuOpen(false)}
-            className="block py-2 hover:text-[#d97736]"
-          >
-            Portfolio
           </a>
           <a
             href="#transformation"
