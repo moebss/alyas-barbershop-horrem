@@ -1,6 +1,5 @@
-import { Star, CheckCircle2, ShieldCheck, ArrowRight, MapPin } from 'lucide-react';
+import { Star, CheckCircle2, ShieldCheck, ArrowRight, MapPin, Scissor } from 'lucide-react';
 import heroImg from '../images/hero_barber.jpg';
-import heroVideo from '../images/hero_barber_loop.mp4';
 
 interface HeroProps {
   onOpenContact: () => void;
@@ -10,33 +9,31 @@ export default function Hero({ onOpenContact }: HeroProps) {
   return (
     <section className="relative min-h-[calc(100vh-4.5rem)] flex items-center overflow-hidden bg-[#0f0d0c] border-b border-stone-800/80 py-16 lg:py-24">
       
-      {/* Full Bleed Cinematic Background Video & Image Fallback */}
+      {/* Full Bleed Cinematic Background Barber Image & Micro-Motion Overlay */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        {/* Background Image Fallback */}
+        {/* Photorealistic Barber Studio Full Bleed Image */}
         <img
           src={heroImg}
-          alt="Alyas Barbershop Horrem Full Bleed Ambiente"
-          className="absolute inset-0 w-full h-full object-cover object-center filter brightness-60 contrast-110"
+          alt="Alyas Barbershop Horrem Full Bleed Herrenfriseur Ambiente"
+          className="absolute inset-0 w-full h-full object-cover object-center filter brightness-65 contrast-110 scale-105 transition-transform duration-10000"
         />
 
-        {/* HTML5 Local Video Loop */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          className="absolute inset-0 w-full h-full object-cover object-center filter brightness-60 contrast-110 opacity-90 transition-opacity duration-1000"
-        >
-          <source src={heroVideo} type="video/mp4" />
-        </video>
+        {/* Micro-Motion Warm Bronze Ambient Glow Pulse */}
+        <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-[#d97736]/20 rounded-full blur-3xl animate-pulse pointer-events-none" />
 
-        {/* Animated Micro-Motion Ambient Glow Particles */}
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-[#d97736]/15 rounded-full blur-3xl animate-pulse pointer-events-none" />
+        {/* Signature Barber Pole Micro-Motion Light Effect */}
+        <div 
+          className="absolute -top-32 right-12 w-28 h-[140%] opacity-20 pointer-events-none blur-sm transform rotate-12"
+          style={{
+            background: 'repeating-linear-gradient(45deg, #d97736, #d97736 20px, #ffffff 20px, #ffffff 40px, #1a1613 40px, #1a1613 60px)',
+            backgroundSize: '200% 200%',
+            animation: 'barberPole 12s linear infinite'
+          }}
+        />
 
         {/* Dark Vignette & Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0f0d0c] via-[#0f0d0c]/85 to-[#0f0d0c]/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0f0d0c] via-transparent to-[#0f0d0c]/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0f0d0c] via-[#0f0d0c]/90 to-[#0f0d0c]/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0f0d0c] via-transparent to-[#0f0d0c]/70" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -107,6 +104,14 @@ export default function Hero({ onOpenContact }: HeroProps) {
         </div>
 
       </div>
+
+      {/* Keyframe Animation for Barber Pole */}
+      <style>{`
+        @keyframes barberPole {
+          0% { background-position: 0 0; }
+          100% { background-position: 0 100px; }
+        }
+      `}</style>
 
     </section>
   );
