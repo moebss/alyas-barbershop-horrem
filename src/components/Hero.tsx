@@ -1,6 +1,6 @@
-import { Star, CheckCircle2, ShieldCheck, ArrowRight, MapPin, Play } from 'lucide-react';
+import { Star, CheckCircle2, ShieldCheck, ArrowRight, MapPin, Scissors } from 'lucide-react';
 import heroImg from '../images/hero_barber.jpg';
-import barberVideo from '../images/hero_barber_loop.mp4';
+import studioImg from '../images/studio_interior.jpg';
 
 interface HeroProps {
   onOpenContact: () => void;
@@ -10,17 +10,12 @@ export default function Hero({ onOpenContact }: HeroProps) {
   return (
     <section className="relative min-h-[calc(100vh-4.5rem)] flex items-center overflow-hidden bg-[#0f0d0c] border-b border-stone-800/80 py-12 lg:py-20">
       
-      {/* Full Bleed Cinematic Background Video & Overlay */}
+      {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        {/* Background Video Loop (Silent) */}
-        <video
-          src={barberVideo}
-          autoPlay
-          loop
-          muted
-          playsInline
-          poster={heroImg}
-          className="absolute inset-0 w-full h-full object-cover filter brightness-[0.4] contrast-110 scale-105"
+        <img
+          src={heroImg}
+          alt="Alyas Barbershop Horrem Herrenfriseur Ambiente"
+          className="absolute inset-0 w-full h-full object-cover object-center filter brightness-[0.45] contrast-110 scale-105"
         />
 
         {/* Micro-Motion Warm Bronze Ambient Glow Pulse */}
@@ -109,29 +104,24 @@ export default function Hero({ onOpenContact }: HeroProps) {
 
           </div>
 
-          {/* Right Column: Featured Video Showcase Card */}
+          {/* Right Column: High-End Photo Showcase Card */}
           <div className="lg:col-span-5 relative group">
             <div className="relative rounded-3xl overflow-hidden border border-stone-800/90 bg-[#1a1613] shadow-2xl transition-all duration-500 group-hover:border-[#d97736]/50">
               
-              {/* Video Loop Element */}
               <div className="relative aspect-[4/5] w-full overflow-hidden">
-                <video
-                  src={barberVideo}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  poster={heroImg}
-                  className="w-full h-full object-cover filter brightness-90 contrast-105 transition-transform duration-700 group-hover:scale-105"
+                <img
+                  src={studioImg}
+                  alt="Alyas Barbershop Studio Interior Kerpen-Horrem"
+                  className="w-full h-full object-cover filter brightness-95 contrast-105 transition-transform duration-700 group-hover:scale-105"
                 />
                 
                 {/* Gradient Overlays */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0f0d0c] via-transparent to-black/30" />
 
-                {/* Top Badge: Live Atmosphere */}
+                {/* Top Badge */}
                 <div className="absolute top-4 left-4 inline-flex items-center gap-2 bg-[#0f0d0c]/80 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-stone-700/60">
-                  <span className="w-2 h-2 rounded-full bg-[#d97736] animate-ping" />
-                  <span className="text-xs font-bold text-stone-200 tracking-wider uppercase">Atmosphäre in Action</span>
+                  <Scissors className="w-3.5 h-3.5 text-[#d97736]" />
+                  <span className="text-xs font-bold text-stone-200 tracking-wider uppercase">Meister-Ambiente</span>
                 </div>
 
                 {/* Bottom Overlay Info */}
@@ -139,9 +129,6 @@ export default function Hero({ onOpenContact }: HeroProps) {
                   <div className="space-y-0.5">
                     <p className="text-xs font-bold text-[#d97736] uppercase tracking-wider">Alyas Barbershop Studio</p>
                     <p className="text-sm font-semibold text-white">Echte Handwerkskunst in Horrem</p>
-                  </div>
-                  <div className="w-10 h-10 rounded-full bg-[#d97736]/20 border border-[#d97736]/50 flex items-center justify-center text-[#d97736]">
-                    <Play className="w-4 h-4 fill-[#d97736]" />
                   </div>
                 </div>
 
@@ -167,4 +154,3 @@ export default function Hero({ onOpenContact }: HeroProps) {
     </section>
   );
 }
-
