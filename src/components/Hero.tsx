@@ -1,4 +1,4 @@
-import { ArrowRight, Phone, Star, MapPin, Sparkles, ChevronDown, Scissors, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Phone, Star, MapPin, Sparkles, Scissors, ShieldCheck } from 'lucide-react';
 import heroImg from '../images/hero_barber.jpg';
 
 interface HeroProps {
@@ -6,10 +6,6 @@ interface HeroProps {
 }
 
 export default function Hero({ onOpenContact }: HeroProps) {
-  const scrollToServices = () => {
-    document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <section id="hero" className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#0c0a09] pt-32 pb-20 sm:pt-36 sm:pb-24 border-b border-stone-800/80">
       
@@ -107,16 +103,6 @@ export default function Hero({ onOpenContact }: HeroProps) {
             <span className="text-[11px] text-stone-400 font-semibold uppercase tracking-wider">Bahnhofstraße 14</span>
           </div>
         </div>
-
-        {/* Scroll Indicator */}
-        <button
-          onClick={scrollToServices}
-          className="pt-6 inline-flex flex-col items-center gap-1 text-stone-400 hover:text-white transition-colors cursor-pointer"
-          aria-label="Zu den Leistungen scrollen"
-        >
-          <span className="text-[10px] uppercase tracking-widest font-semibold">Leistungen entdecken</span>
-          <ChevronDown className="w-4 h-4 animate-bounce text-[#d97736]" />
-        </button>
 
       </div>
     </section>
