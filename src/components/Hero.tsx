@@ -7,44 +7,34 @@ interface HeroProps {
 
 export default function Hero({ onOpenContact }: HeroProps) {
   return (
-    <section className="relative min-h-[calc(100vh-4.5rem)] flex items-center overflow-hidden bg-[#0f0d0c] border-b border-stone-800/80 py-16 lg:py-24">
+    <section className="relative min-h-[calc(100vh-4.5rem)] flex items-center overflow-hidden bg-[#0c0a09] border-b border-stone-800/80 py-16 lg:py-24">
       
       {/* Full Bleed Photorealistic Background Image */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           src={heroImg}
           alt="Alyas Barbershop Horrem Herrenfriseur Ambiente"
-          className="absolute inset-0 w-full h-full object-cover object-right lg:object-center filter brightness-[0.55] contrast-105 scale-105"
+          className="absolute inset-0 w-full h-full object-cover object-right lg:object-center filter brightness-[0.5] contrast-110"
         />
 
         {/* Micro-Motion Warm Bronze Ambient Glow Pulse */}
-        <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-[#d97736]/15 rounded-full blur-3xl animate-pulse pointer-events-none" />
-
-        {/* Signature Barber Pole Micro-Motion Light Effect */}
-        <div 
-          className="absolute -top-32 right-12 w-28 h-[140%] opacity-20 pointer-events-none blur-sm transform rotate-12"
-          style={{
-            background: 'repeating-linear-gradient(45deg, #d97736, #d97736 20px, #ffffff 20px, #ffffff 40px, #1a1613 40px, #1a1613 60px)',
-            backgroundSize: '200% 200%',
-            animation: 'barberPole 12s linear infinite'
-          }}
-        />
+        <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-[#d97736]/10 rounded-full blur-3xl pointer-events-none" />
 
         {/* Dark Vignette & Gradient Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0f0d0c] via-[#0f0d0c]/90 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0f0d0c] via-transparent to-[#0f0d0c]/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0c0a09] via-[#0c0a09]/90 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0c0a09] via-transparent to-[#0c0a09]/80" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         
-        {/* Sleek Floating Glass Box */}
-        <div className="max-w-2xl lg:max-w-3xl bg-[#0f0d0c]/85 backdrop-blur-xl border border-stone-800/90 p-8 sm:p-12 lg:p-14 rounded-3xl shadow-2xl space-y-6">
+        {/* Floating Glass Box */}
+        <div className="max-w-2xl lg:max-w-3xl bg-[#171412]/85 backdrop-blur-xl border border-stone-800 p-8 sm:p-12 lg:p-14 rounded-3xl shadow-2xl space-y-6">
           
           {/* Eyebrow Badge */}
-          <div className="inline-flex items-center gap-2.5 bg-[#1a1613] border border-[#d97736]/40 px-4 py-1.5 rounded-full shadow-sm">
-            <div className="flex items-center gap-1 text-stone-200">
+          <div className="inline-flex items-center gap-2.5 bg-[#0c0a09] border border-[#d97736]/40 px-4 py-1.5 rounded-full shadow-xs">
+            <div className="flex items-center gap-1 text-[#d97736]">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-3.5 h-3.5 fill-stone-200 text-stone-200" />
+                <Star key={i} className="w-3.5 h-3.5 fill-[#d97736] text-[#d97736]" />
               ))}
             </div>
             <span className="text-xs font-bold text-[#d97736] tracking-wider uppercase flex items-center gap-1.5">
@@ -60,7 +50,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
 
           {/* Subline */}
           <p className="text-base sm:text-lg text-stone-300 font-normal leading-relaxed max-w-2xl">
-            Willkommen bei <strong className="text-white font-semibold">Alyas Barbershop</strong> in Kerpen-Horrem. Wir bieten scharfe Skin Fades, exakte Rasiermesser-Konturen, wohltuende Hot Towel Rasuren & Männer-Grooming in entspannter Barbershop-Atmosphäre.
+            Willkommen bei <strong className="text-white font-semibold">Alyas Barbershop</strong> in Kerpen-Horrem. Wir bieten scharfe Skin Fades, exakte Rasiermesser-Konturen, wohltuende Hot Towel Rasuren & modernes Männer-Grooming in entspannter Barbershop-Atmosphäre.
           </p>
 
           {/* Action Buttons */}
@@ -70,7 +60,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
               aria-label="Wunschtermin buchen"
               className="bg-[#d97736] hover:bg-[#c26527] text-stone-950 font-bold text-base px-8 py-4 rounded-xl shadow-xl transition-all transform active:scale-98 flex items-center justify-center gap-3 cursor-pointer group uppercase tracking-wider"
             >
-              <span>Termin Buchen</span>
+              <span>Termin Anfragen</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
 
@@ -78,7 +68,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
               href="https://wa.me/491728987263?text=Hallo!%20Ich%20m%C3%B6chte%20gerne%20einen%20Termin%20bei%20Alyas%20Barbershop%20Horrem%20vereinbaren."
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#1a1613] hover:bg-stone-800 text-stone-200 border border-stone-800 font-semibold text-base px-6 py-4 rounded-xl shadow-xs transition-colors text-center flex items-center justify-center gap-2 uppercase tracking-wider"
+              className="bg-[#0c0a09] hover:bg-stone-900 text-stone-200 border border-stone-800 font-semibold text-base px-6 py-4 rounded-xl shadow-xs transition-colors text-center flex items-center justify-center gap-2 uppercase tracking-wider"
             >
               <span>WhatsApp Direkt</span>
             </a>
@@ -103,15 +93,6 @@ export default function Hero({ onOpenContact }: HeroProps) {
         </div>
 
       </div>
-
-      {/* Keyframe Animation for Barber Pole */}
-      <style>{`
-        @keyframes barberPole {
-          0% { background-position: 0 0; }
-          100% { background-position: 0 100px; }
-        }
-      `}</style>
-
     </section>
   );
 }
