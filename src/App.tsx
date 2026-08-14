@@ -1,11 +1,10 @@
 import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import TrustStrip from './components/TrustStrip';
 import ServicePrices from './components/ServicePrices';
 import AboutUs from './components/AboutUs';
-import GoogleReviews from './components/GoogleReviews';
 import BeforeAfterSlider from './components/BeforeAfterSlider';
+import GoogleReviews from './components/GoogleReviews';
 import CostEstimator from './components/CostEstimator';
 import FAQ from './components/FAQ';
 import Contact from './components/Contact';
@@ -28,11 +27,10 @@ export default function App() {
       <Navbar onOpenContact={scrollToContact} />
       <main className="flex-grow">
         <Hero onOpenContact={scrollToContact} />
-        <TrustStrip />
         <ServicePrices onOpenContact={scrollToContact} />
         <AboutUs />
-        <GoogleReviews />
         <BeforeAfterSlider />
+        <GoogleReviews />
         <CostEstimator onOpenContact={scrollToContact} />
         <FAQ />
         <Contact />

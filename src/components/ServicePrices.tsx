@@ -1,4 +1,4 @@
-import { Check, ArrowRight, Clock } from 'lucide-react';
+import { Scissors, Clock, ArrowRight, Sparkles } from 'lucide-react';
 import imgCut from '../images/service_cut.jpg';
 import imgBeard from '../images/service_beard.jpg';
 import imgVip from '../images/service_vip.jpg';
@@ -11,136 +11,187 @@ interface ServicePricesProps {
 }
 
 export default function ServicePrices({ onOpenContact }: ServicePricesProps) {
-  const services = [
-    {
-      title: 'Herrenhaarschnitt & Fade',
-      price: 'ab 22 €',
-      time: '30 Min',
-      image: imgCut,
-      desc: 'Präzisions-Haarschnitt, Skin Fade nach Wunsch, Waschen & Styling.',
-      highlights: ['Übergang auf 0mm möglich', 'Haarwäsche & Styling', 'Nackenkontur ausrasiert']
-    },
-    {
-      title: 'Bartpflege & Konturen',
-      price: 'ab 15 €',
-      time: '20 Min',
-      image: imgBeard,
-      desc: 'Formen des Bartes mit Trimmer & Rasiermesser-Finish inkl. Pflegeöl.',
-      highlights: ['Schärfste Rasiermesser-Linien', 'Bartöl & Pflege', 'Schnurrbart-Trimming']
-    },
-    {
-      title: 'VIP Kombo (Haar + Bart)',
-      price: 'ab 34 €',
-      time: '45 Min',
-      image: imgVip,
-      desc: 'Das Komplettpaket: Haarschnitt, Bartgestaltung, Hot Towel & Styling.',
-      highlights: ['Haarschnitt & Fade', 'Bart in Form bringen', 'Hot Towel Handtuch-Kompresse']
-    },
-    {
-      title: 'Hot Towel Deluxe Rasur',
-      price: 'ab 25 €',
-      time: '30 Min',
-      image: imgHotTowel,
-      desc: 'Traditionelle Nassrasur mit warmer Kompresse & Gesichts-Kühlcreme.',
-      highlights: ['Warme Kräuter-Kompresse', 'Klassischer Schaum', 'After-Shave Balsam']
-    },
-    {
-      title: 'Kinderhaarschnitt (bis 12 J.)',
-      price: 'ab 17 €',
-      time: '25 Min',
-      image: imgKids,
-      desc: 'Geduldige & trendige Haarschnitte für Kids & Jugendliche.',
-      highlights: ['Freundlicher Service', 'Moderne Cut-Trends', 'Muster & Striche auf Wunsch']
-    },
-    {
-      title: 'Gesichts-Waxing & Augenbrauen',
-      price: 'ab 8 €',
-      time: '15 Min',
-      image: imgWaxing,
-      desc: 'Entfernung von Nasen-, Ohrenhaaren & Zupfen der Augenbrauen mit Faden.',
-      highlights: ['Sanftes Ohr-/Nasenwaxing', 'Fadentechnik Augenbrauen', 'Glatte Konturen']
-    }
-  ];
-
   return (
-    <section id="preise" className="py-20 bg-[#0f0d0c] border-b border-stone-800/80">
+    <section id="services" className="py-24 bg-[#0c0a09] border-b border-stone-800/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="text-xs font-semibold tracking-widest text-[#d97736] uppercase bg-[#1a1613] border border-[#d97736]/30 px-3.5 py-1.5 rounded-full inline-block">
-            Behandlungen & Preise
-          </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-white leading-tight">
-            Barber-Handwerk & Preistabelle
-          </h2>
-          <p className="text-stone-300 text-base sm:text-lg font-normal max-w-2xl mx-auto">
-            Faire Preise, erstklassiger Service & entspannte Gentlemen-Atmosphäre in Horrem.
-          </p>
+        {/* Editorial Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div className="space-y-4 max-w-2xl">
+            <span className="text-xs font-semibold tracking-widest text-[#d97736] uppercase bg-[#171412] border border-[#d97736]/30 px-3.5 py-1.5 rounded-full inline-block">
+              Leistungen & Preistransparenz
+            </span>
+            <h2 className="font-serif text-4xl sm:text-5xl font-normal text-white leading-tight">
+              Klassisches Handwerk & <br />
+              <span className="italic text-[#d97736]">Moderne Cuts</span>.
+            </h2>
+            <p className="text-stone-300 text-base leading-relaxed">
+              Jeder Haarschnitt und jede Rasur wird bei uns individuell auf Ihre Kopfform und Ihren Bartwuchs abgestimmt.
+            </p>
+          </div>
+
+          <button
+            onClick={onOpenContact}
+            className="hidden md:flex bg-[#171412] hover:bg-[#221e1a] text-white border border-stone-800 hover:border-[#d97736]/40 text-xs font-bold uppercase tracking-wider px-6 py-4 rounded-xl items-center gap-2 transition-all cursor-pointer shrink-0"
+          >
+            <span>Termin Anfragen</span>
+            <ArrowRight className="w-4 h-4 text-[#d97736]" />
+          </button>
         </div>
 
-        {/* Services Grid with Visual Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((s, idx) => (
-            <div key={idx} className="group bg-[#1a1613] border border-stone-800/90 rounded-3xl overflow-hidden hover:border-[#d97736]/50 transition-all duration-300 shadow-xl flex flex-col justify-between">
-              
-              <div>
-                {/* Visual Header Image */}
-                <div className="relative aspect-[16/10] w-full overflow-hidden bg-stone-900">
-                  <img
-                    src={s.image}
-                    alt={s.title}
-                    className="w-full h-full object-cover filter brightness-90 contrast-105 transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a1613] via-transparent to-black/20" />
-                  
-                  {/* Floating Price Tag */}
-                  <div className="absolute bottom-3 right-3 bg-[#0f0d0c]/90 backdrop-blur-md border border-[#d97736]/40 px-3.5 py-1 rounded-xl shadow-lg">
-                    <span className="font-serif font-extrabold text-[#d97736] text-lg">{s.price}</span>
-                  </div>
-
-                  {/* Time Badge */}
-                  <div className="absolute top-3 left-3 bg-[#0f0d0c]/80 backdrop-blur-md px-2.5 py-1 rounded-full border border-stone-700/60 flex items-center gap-1.5">
-                    <Clock className="w-3 h-3 text-[#d97736]" />
-                    <span className="text-[11px] font-bold text-stone-200 uppercase tracking-wider">{s.time}</span>
-                  </div>
+        {/* Asymmetric Bento-Grid Architecture */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          {/* Card 1: Large Featured VIP Card (Spans 2 columns on desktop) */}
+          <div className="lg:col-span-2 group relative bg-[#171412] border border-stone-800/90 rounded-3xl overflow-hidden shadow-2xl flex flex-col justify-between hover:border-[#d97736]/40 transition-all duration-300">
+            <div className="grid grid-cols-1 sm:grid-cols-2 h-full">
+              {/* Photo */}
+              <div className="relative min-h-[260px] sm:min-h-full overflow-hidden">
+                <img
+                  src={imgVip}
+                  alt="VIP Komplettpaket Alyas Barbershop"
+                  className="w-full h-full object-cover filter brightness-90 contrast-105 group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute top-4 left-4 bg-[#d97736] text-stone-950 text-[11px] font-extrabold uppercase px-3 py-1 rounded-full flex items-center gap-1.5 shadow-lg">
+                  <Sparkles className="w-3 h-3" />
+                  <span>Beliebtestes Paket</span>
                 </div>
+              </div>
 
-                {/* Content Section */}
-                <div className="p-6 space-y-4">
-                  <h3 className="font-serif font-semibold text-xl text-white leading-snug group-hover:text-[#d97736] transition-colors">
-                    {s.title}
+              {/* Content */}
+              <div className="p-8 sm:p-10 flex flex-col justify-between space-y-6">
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-stone-400 font-semibold uppercase tracking-wider flex items-center gap-1.5">
+                      <Clock className="w-3.5 h-3.5 text-[#d97736]" />
+                      <span>ca. 45 Min</span>
+                    </span>
+                    <span className="font-serif text-3xl font-bold text-[#d97736]">34 €</span>
+                  </div>
+
+                  <h3 className="font-serif text-2xl sm:text-3xl font-normal text-white">
+                    VIP Kombo Deluxe
                   </h3>
-
-                  <p className="text-xs text-stone-300 leading-relaxed font-normal">
-                    {s.desc}
+                  <p className="text-stone-300 text-sm leading-relaxed">
+                    Das Rundum-Sorglos-Paket: Präzisions-Haarschnitt mit Skin Fade, Bartgestaltung mit Rasiermesser-Finish, wohltuende Hot Towel Kräuterkompresse & After-Shave Pflege.
                   </p>
+                </div>
 
-                  <ul className="space-y-2 text-xs text-stone-300 font-medium pt-2 border-t border-stone-800/80">
-                    {s.highlights.map((h, i) => (
-                      <li key={i} className="flex items-center gap-2">
-                        <Check className="w-3.5 h-3.5 text-[#d97736] shrink-0" />
-                        <span>{h}</span>
-                      </li>
-                    ))}
-                  </ul>
+                <div className="pt-4 border-t border-stone-800/80">
+                  <button
+                    onClick={onOpenContact}
+                    className="w-full bg-[#d97736] hover:bg-[#c26527] text-stone-950 font-bold text-xs uppercase tracking-wider py-3.5 px-6 rounded-xl flex items-center justify-center gap-2 cursor-pointer shadow-md transition-colors"
+                  >
+                    <span>VIP Paket Anfragen</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 2: Herrenhaarschnitt & Fade */}
+          <div className="group bg-[#171412] border border-stone-800/90 rounded-3xl overflow-hidden shadow-xl flex flex-col justify-between hover:border-stone-700 transition-all duration-300">
+            <div className="relative aspect-[16/10] overflow-hidden">
+              <img
+                src={imgCut}
+                alt="Herrenhaarschnitt & Fade"
+                className="w-full h-full object-cover filter brightness-90 contrast-105 group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute bottom-3 right-3 bg-[#0c0a09]/90 backdrop-blur-md border border-stone-700 px-3.5 py-1 rounded-xl">
+                <span className="font-serif font-bold text-[#d97736] text-lg">ab 22 €</span>
+              </div>
+            </div>
+            <div className="p-6 space-y-2">
+              <span className="text-[11px] text-stone-400 font-semibold uppercase tracking-wider flex items-center gap-1">
+                <Clock className="w-3 h-3 text-[#d97736]" /> 30 Min
+              </span>
+              <h3 className="font-serif text-xl font-normal text-white">Herrenhaarschnitt & Fade</h3>
+              <p className="text-stone-400 text-xs leading-relaxed">
+                Präziser Schnitt nach Wunsch (Skin Fade, Classic Cut, Taper), Waschen & individuelles Styling.
+              </p>
+            </div>
+          </div>
+
+          {/* Card 3: Bartpflege & Konturen */}
+          <div className="group bg-[#171412] border border-stone-800/90 rounded-3xl overflow-hidden shadow-xl flex flex-col justify-between hover:border-stone-700 transition-all duration-300">
+            <div className="relative aspect-[16/10] overflow-hidden">
+              <img
+                src={imgBeard}
+                alt="Bartpflege & Konturen"
+                className="w-full h-full object-cover filter brightness-90 contrast-105 group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute bottom-3 right-3 bg-[#0c0a09]/90 backdrop-blur-md border border-stone-700 px-3.5 py-1 rounded-xl">
+                <span className="font-serif font-bold text-[#d97736] text-lg">ab 15 €</span>
+              </div>
+            </div>
+            <div className="p-6 space-y-2">
+              <span className="text-[11px] text-stone-400 font-semibold uppercase tracking-wider flex items-center gap-1">
+                <Clock className="w-3 h-3 text-[#d97736]" /> 20 Min
+              </span>
+              <h3 className="font-serif text-xl font-normal text-white">Bartpflege & Konturen</h3>
+              <p className="text-stone-400 text-xs leading-relaxed">
+                Formen des Bartes mit Trimmer, exakte Rasiermesser-Linien an Wange und Hals & Bartöl-Finish.
+              </p>
+            </div>
+          </div>
+
+          {/* Card 4: Hot Towel Deluxe Rasur */}
+          <div className="group bg-[#171412] border border-stone-800/90 rounded-3xl overflow-hidden shadow-xl flex flex-col justify-between hover:border-stone-700 transition-all duration-300">
+            <div className="relative aspect-[16/10] overflow-hidden">
+              <img
+                src={imgHotTowel}
+                alt="Hot Towel Deluxe Rasur"
+                className="w-full h-full object-cover filter brightness-90 contrast-105 group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute bottom-3 right-3 bg-[#0c0a09]/90 backdrop-blur-md border border-stone-700 px-3.5 py-1 rounded-xl">
+                <span className="font-serif font-bold text-[#d97736] text-lg">ab 25 €</span>
+              </div>
+            </div>
+            <div className="p-6 space-y-2">
+              <span className="text-[11px] text-stone-400 font-semibold uppercase tracking-wider flex items-center gap-1">
+                <Clock className="w-3 h-3 text-[#d97736]" /> 30 Min
+              </span>
+              <h3 className="font-serif text-xl font-normal text-white">Hot Towel Deluxe Rasur</h3>
+              <p className="text-stone-400 text-xs leading-relaxed">
+                Klassische Nassrasur mit heißer Kräuter-Dampfkompresse, Schaum & beruhigendem After-Shave Balsam.
+              </p>
+            </div>
+          </div>
+
+          {/* Card 5: Kinderhaarschnitt & Waxing Mini-Split */}
+          <div className="group bg-[#171412] border border-stone-800/90 rounded-3xl p-6 shadow-xl flex flex-col justify-between hover:border-stone-700 transition-all duration-300 space-y-6">
+            <div className="space-y-4">
+              <div className="flex items-center gap-3 pb-4 border-b border-stone-800">
+                <img src={imgKids} alt="Kinderhaarschnitt" className="w-14 h-14 rounded-2xl object-cover shrink-0" />
+                <div className="flex-1">
+                  <div className="flex items-center justify-between">
+                    <h4 className="font-serif font-semibold text-white text-base">Kinderhaarschnitt</h4>
+                    <span className="font-serif font-bold text-[#d97736] text-sm">17 €</span>
+                  </div>
+                  <p className="text-stone-400 text-xs mt-0.5">Bis 12 Jahre • Geduldig & trendig</p>
                 </div>
               </div>
 
-              {/* Action Button */}
-              <div className="p-6 pt-0">
-                <button
-                  onClick={onOpenContact}
-                  aria-label={`Termin für ${s.title} buchen`}
-                  className="w-full bg-[#d97736] hover:bg-[#c26527] text-stone-950 font-bold text-xs py-3.5 rounded-xl transition-all flex items-center justify-center gap-2 uppercase tracking-wider cursor-pointer shadow-md group-hover:shadow-lg"
-                >
-                  <span>Termin Buchen</span>
-                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                </button>
+              <div className="flex items-center gap-3">
+                <img src={imgWaxing} alt="Gesichts-Waxing" className="w-14 h-14 rounded-2xl object-cover shrink-0" />
+                <div className="flex-1">
+                  <div className="flex items-center justify-between">
+                    <h4 className="font-serif font-semibold text-white text-base">Face Waxing & Faden</h4>
+                    <span className="font-serif font-bold text-[#d97736] text-sm">ab 8 €</span>
+                  </div>
+                  <p className="text-stone-400 text-xs mt-0.5">Ohren, Nase & Augenbrauen mit Fadentechnik</p>
+                </div>
               </div>
-
             </div>
-          ))}
+
+            <div className="bg-[#0c0a09] p-4 rounded-2xl border border-stone-800/80 text-center">
+              <p className="text-xs text-stone-300 font-medium">
+                ✂️ Alle Behandlungen auch ohne Termin als <strong>Walk-In</strong> verfügbar.
+              </p>
+            </div>
+          </div>
+
         </div>
 
       </div>
