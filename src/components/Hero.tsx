@@ -11,7 +11,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#0c0a09] pt-20 pb-16 lg:py-0 border-b border-stone-800/80">
+    <section id="hero" className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#0c0a09] pt-32 pb-20 sm:pt-36 sm:pb-24 border-b border-stone-800/80">
       
       {/* 100vh Full Bleed Photography with Deep Contrast Overlay */}
       <div className="absolute inset-0 z-0">
@@ -25,7 +25,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#d97736]/15 via-transparent to-transparent pointer-events-none" />
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center space-y-8 pt-12">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center space-y-8">
         
         {/* Eyebrow Pill */}
         <div className="inline-flex items-center gap-2.5 bg-[#171412]/90 border border-[#d97736]/40 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-widest text-[#d97736] backdrop-blur-md shadow-lg">
