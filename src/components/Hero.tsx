@@ -1,5 +1,5 @@
 import { ArrowRight, Phone, Star, MapPin, Sparkles, ChevronDown, Scissors, ShieldCheck } from 'lucide-react';
-import heroImg from '../images/hero_barber_alyas.jpg';
+import heroImg from '../images/hero_barber.jpg';
 
 interface HeroProps {
   onOpenContact: () => void;
